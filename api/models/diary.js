@@ -19,7 +19,7 @@ class Diary{
     }
 
     static async getOneById(id){
-        const response = await db.query('SELECT * FROM diary WHERE dairy_id =$1', [id]);
+        const response = await db.query('SELECT * FROM diary WHERE id =$1', [id]);
         if (response.rows.length !=1 ){
             throw new Error('Unable to find diary')
         }
