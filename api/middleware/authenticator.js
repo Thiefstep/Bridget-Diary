@@ -18,3 +18,5 @@ async function authenticator(req, res, next) {
         })
     }
 }
+
+module.exports = authenticator
