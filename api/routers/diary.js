@@ -1,10 +1,12 @@
-const {Router} = require('express')
+const { Router } = require("express");
 
-const diaryController = require ('../controllers/diary')
+const diaryController = require("../controllers/diary");
+const diaryRouters = Router();
 
-const diaryRouters = Router()
+diaryRouters.get("/diary", diaryController.index);
+diaryRouters.get("/diary/:id", diaryController.show);
+diaryRouter.post("/", diaryController.create);
+diaryRouter.patch("diary/:id", diaryController.update);
+diaryRouter.delete("diary/:id", diaryController.destroy);
 
-diaryRouters.get('/diary', diaryController.index)
-diaryRouters.get('/diary/:id', diaryController.show)
-
-module.exports = diaryRouters
+module.exports = diaryRouters;
