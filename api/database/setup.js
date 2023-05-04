@@ -11,5 +11,3 @@ db.query(sql)
         console.log('Set-up Complete')
     })
     .catch(error => console.log(error));
-    
-setUp()
