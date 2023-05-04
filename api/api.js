@@ -19,4 +19,6 @@ api.get('/', (req,res)=>{
 
 api.use('/diary', diaryRouter)
 
-module.exp
+
+module.exports = api;
+
