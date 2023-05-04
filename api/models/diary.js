@@ -2,13 +2,16 @@ const db = require('../database/connect');
 
 class Diary{
 
-    constructor({ diary_id, diary_description}) {
-        this.id = diary_id;
-        this.description = diary_description;
+    constructor({ id, date, time, text, category}) {
+        this.id = id;
+        this.date = date;
+        this.time = time;
+        this.description = text;
+        this.category = category;
     }
 
     static async getAll(){
-        const response = await db.query('SELECT * FROM diary ORDER BY diary_id;')
+        const response = await db.query('SELECT * FROM diary ORDER BY id;')
         if (!response.rows.length){
             throw new Error('No diary available');
         }
